@@ -2,6 +2,8 @@
 let button = document.getElementById('btn');
 let prestoButton = document.getElementById("presto");
 let abraButton = document.getElementById("abra");
+const changeTextButton = document.getElementById("changeTextBtn");
+const textParagraph = document.getElementById("textParagraph");
 
 // add an event listener to the button
 button.addEventListener("click", sayMagicWord);
@@ -19,3 +21,15 @@ function sayMagicWord(event){
 
 prestoButton.addEventListener("click", sayMagicWord)
 abraButton.addEventListener("click", sayMagicWord)
+
+changeTextButton.addEventListener("click", ()=>{
+    textParagraph.textContent = "I changed the text!"
+    textParagraph.classList.add('changed')
+    changeTextButton.textContent = "Refresh for original content."
+})
+
+function createButton(){
+
+}
+
+createButton()
