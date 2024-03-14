@@ -29,7 +29,20 @@ changeTextButton.addEventListener("click", ()=>{
 })
 
 function createButton(){
+    const container = document.getElementById("buttonContainer");
+    const newButton = document.createElement("button");
 
+    newButton.textContent = "Ask question.";
+    container.appendChild(newButton);
+
+    newButton.addEventListener("click", ()=>{
+        let userAnswer = prompt("Do you like peanut butter?")
+        if(userAnswer !== ""){
+            alert(`You answered: ${userAnswer}`)
+        }else{
+            alert("no answer provided.")
+        }
+    })
 }
 
 createButton()
